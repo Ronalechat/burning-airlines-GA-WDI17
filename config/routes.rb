@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => '/'
+  root :to => 'pages#index'
 
   resources :reservations
   resources :users
