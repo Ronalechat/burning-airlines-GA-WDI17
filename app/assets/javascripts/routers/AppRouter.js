@@ -3,10 +3,9 @@ app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     "": "index",
-    "planes": "plane",
+    "airplanes": "airplane",
     "flights": "flight",
-    "flights/:id":"book",
-    "search": "search"
+    "flights/:id":"booking"
   },
 
   index: function() {
