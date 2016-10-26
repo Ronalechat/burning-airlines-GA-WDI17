@@ -7,9 +7,18 @@ app.FlightView = Backbone.View.extend({
   },
   render: function() {
 
+    //
+    // TODO: Add variable, template, and JQUERY to create new flights.
+    var flightViewHTML = $('#flightsView-template').html();
+    this.$el.html(flightViewHTML)
 
-    var flightViewHTML = $('#').html();
-    
+    app.burningFlights.fetch().done(function(result) {
+      console.log(result);
+      var flightListViewTemplate = $('#flight')
+
+
+    });
+
   }
 
 
