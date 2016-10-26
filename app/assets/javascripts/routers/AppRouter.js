@@ -56,6 +56,7 @@ app.AppRouter = Backbone.Router.extend({
     var searchView = new app.SearchView({collection: app.Flights});
     //TODO Make searchView
     searchView.render();
+      
 
   }
 
