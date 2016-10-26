@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <ul class="nav navbar-nav">
     <li>
-      <div class="navbar-header">HI</div>
+      <div class="navbar-header"><a href="/#">Home</a></div>
     </li>
 
   </ul>
@@ -70,11 +70,12 @@
 
 <script type="text/x-template" id="flightid-template">
   <table class="table table-bordered">
-  <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
-  <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
-  <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
-  <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
-  <tr class="active"><p>Rows/Cols: <mark>{{ Airplane_where airplane_id =={{=airplane_id}} }}</mark></p></tr>
+    <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
+    <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
+    <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
+    <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
+    <tr class="active"><p>Cols: <mark id="col">{{=airplane.column}}</mark></p></tr>
+    <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
   </table>
 </div>
   <div class="redline">
@@ -85,5 +86,9 @@
     </table>
   </div>
 
+</script>
+
+<script type="text/x-template" id="blackSeat">
+  <img src="http://www.4wd.com/aux_incl/images.ashx?i=TR6701MB.jpg&partNo=CBU&w=50&h=50" alt="">
 </script>
 </div>

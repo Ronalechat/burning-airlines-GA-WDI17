@@ -10,16 +10,16 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
-    flight = Flight.find params[:id]
+    # @flight = Flight.find params[:id]
     # seats = {rows: flight.airplane.row, cols: flight.airplane.column}
     # flight.merge! seats
     # flight.rows = flight.airplane.row
-
-    respond_to do |format|
-      format.json do
-        render :json => flight #flight.to_json(:include => {rows: rows, cols: cols})
-      end
-    end
+    #
+    # respond_to do |format|
+    #   format.json do
+    #     render :json => flight.to_json(:include => {rows: rows, cols: cols})
+    #   end
+    # end
   end
 
   # GET /flights/new
