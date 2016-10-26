@@ -10,6 +10,7 @@ app.ReservationView = Backbone.View.extend({
 
     var $seats = this.$el.find('#seats');
     console.log($seats);
+    // get the plane info from flight, find row column from plane, return the plane's seat fields
 
     // this.$el.html( $('#flightid-template').html() );
   }
