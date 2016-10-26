@@ -47,38 +47,44 @@
 <script type="text/x-template" id="airplane-template">
 
 </script>
-
+<!-- search template begin -->
 <script type="text/x-template" id="search-template">
+
   <h2>Origin</h2>
 
   <div class="origin">
     <select id="origin">
-      <option>Blank</option>
+      <option>Choose one (but obviously not this actual one you drunk muppet):</option>
+
     </select>
   </div>
 
   <h2>Destination</h2>
 
   <div class="desination">
-    <select id="#destination">
-      <option>Blank</option>
+    <select id="destination">
+      <option>Choose one (but obviously not this actual one you drunk muppet):</option>
     </select>
   </div>
 
-  <input type="button" id="restart" value="Find">
+  <input type="button" id="doSearch" value="Find">
 </script>
 
+<!-- search template end -->
+
 <script type="text/x-template" id="flightid-template">
-  <table class="table table-bordered">
-    <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
-    <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
-    <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
-    <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
-    <tr class="active"><p>Cols: <mark id="col">{{=airplane.column}}</mark></p></tr>
-    <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
-  </table>
-</div>
-  <div class="redline">
+  <div class="col-md-4">
+    <table class="table table-bordered">
+      <br>
+      <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
+      <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
+      <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
+      <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
+      <tr class="active"><p>Cols: <mark id="col">{{=airplane.column}}</mark></p></tr>
+      <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
+    </table>
+  </div>
+  <div class="col-md-4">
     <!-- nested looop for rows and columns -->
       <div id="seats"></div>
       <!-- order is important, make sure we render first this.$el.find -->

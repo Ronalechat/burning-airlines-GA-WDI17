@@ -30,7 +30,17 @@ fl22 = Flight.create :date => "23/12/2016", :flight_num => "BA814", :origin => "
 fl23 = Flight.create :date => "06/12/2016", :flight_num => "BA822", :origin => "HKG", :destination => "SYD", :airplane => a2
 fl24 = Flight.create :date => "23/12/2016", :flight_num => "BA809", :origin => "HKG", :destination => "CAE", :airplane => a3
 fl25 = Flight.create :date => "23/12/2016", :flight_num => "BA811", :origin => "HKG", :destination => "HKG", :airplane => a3
-
+fl26 = Flight.create :date => "18/12/2016", :flight_num => "BA613", :origin => "LAX", :destination => "HKG", :airplane => a3
+fl27 = Flight.create :date => "19/12/2016", :flight_num => "BA604", :origin => "CAE", :destination => "LHR", :airplane => a1
+fl28 = Flight.create :date => "21/01/2017", :flight_num => "BA608", :origin => "CAE", :destination => "LAX", :airplane => a2
+fl29 = Flight.create :date => "28/01/2017", :flight_num => "BA510", :origin => "CAE", :destination => "SYD", :airplane => a3
+fl30 = Flight.create :date => "01/02/2017", :flight_num => "BA900", :origin => "CAE", :destination => "CAE", :airplane => a1
+fl31 = Flight.create :date => "23/01/2017", :flight_num => "BA924", :origin => "CAE", :destination => "HKG", :airplane => a3
+fl32 = Flight.create :date => "06/01/2017", :flight_num => "BA942", :origin => "HKG", :destination => "LHR", :airplane => a2
+fl33 = Flight.create :date => "23/02/2017", :flight_num => "BA914", :origin => "HKG", :destination => "LAX", :airplane => a3
+fl34 = Flight.create :date => "06/02/2017", :flight_num => "BA922", :origin => "HKG", :destination => "SYD", :airplane => a2
+fl35 = Flight.create :date => "23/02/2017", :flight_num => "BA309", :origin => "HKG", :destination => "CAE", :airplane => a3
+fl36 = Flight.create :date => "23/01/2017", :flight_num => "BA311", :origin => "HKG", :destination => "HKG", :airplane => a3
 # fl1.airplane = a1
 # fl1.save
 
