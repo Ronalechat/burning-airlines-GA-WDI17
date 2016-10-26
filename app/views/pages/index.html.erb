@@ -1,19 +1,28 @@
-<div class="container">
-
-<br>
-<button id="searchButton">Search</button>
-<br>
 <h1>Burning Airlines</h1>
 
-
+<!-- Append results to main -->
 <div id="main">
 </div>
-<!-- Append results to main -->
-
-<div id="searchForm"></div>
-<div id="results"></div>
 
 <script type="text/x-template" id="flights-template">
+
+  <h2>Origin</h2>
+
+  <div class="origin">
+    <select id="origin">
+      <option>Blank</option>
+    </select>
+  </div>
+
+  <h2>Destination</h2>
+
+  <div class="desination">
+    <select id="#destination">
+      <option>Blank</option>
+    </select>
+  </div>
+
+  <input type="button" id="restart" value="Find">
 
 </script>
 
@@ -39,7 +48,6 @@
   </div>
 
   <input type="button" id="restart" value="Find">
-
 </script>
 
 <script type="text/x-template" id="flightid-template">
@@ -55,8 +63,4 @@
     </table>
   </div>
 
-  <div id="selectedSeat"></div>
-  <button id="selectSeat">Select seat</button>
 </script>
-
-</div>
