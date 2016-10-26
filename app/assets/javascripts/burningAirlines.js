@@ -19,22 +19,17 @@ $(document).ready(function(){
 
   app.burningFlights.fetch().done(function () {
     app.appRouter = new app.AppRouter();
-    // 
-    // initialize: function() {
-    // },
-    // el: '#main',
-    // render: function () {
-    //     this.$el.html( $('#search-template').html(), {} );
-    //     var aView = new TheView({el: $("#origin")})
+    //
+    //   initialize: function() {
+    //   },
+    //   el: '#main',
+    //
+    // render: function() {
+    //
+    //   var origin = app.burningFlights.pluck('origin');
+    //   this.$el.text( origin );
+    //   $('#origin').prepend(this.$el);
     // };
-    // };
-
-  // render: function() {
-
-  //   var origin = app.burningFlights.pluck('origin');
-  //   this.$el.text( origin ); // What would happen if we used .html instead?
-  //   $('#origin').prepend(this.$el);
-  // };
 
     Backbone.history.start()
   });
