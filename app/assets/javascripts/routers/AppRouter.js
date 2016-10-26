@@ -41,11 +41,11 @@ app.AppRouter = Backbone.Router.extend({
     $('#main').show();
     app.burningFlights.fetch().done(function (){
       var flight = app.burningFlights.get(id);
-      // var airplane_id = flight.attributes.airplane_id
+      var airplane_id = flight.attributes.airplane_id
       var options = {
         flight: app.burningFlights.get(id),
-        // airplane_id: flight.attributes.airplane_id,
-        // airplane: app.burningAirplanes.get(airplane_id)
+        airplane_id: flight.attributes.airplane_id,
+        airplane: app.burningAirplanes.get(airplane_id)
       }
       var reservationView = new app.ReservationView({model: options});
       reservationView.render(options.airplane);
