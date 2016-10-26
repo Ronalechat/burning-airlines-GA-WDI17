@@ -45,9 +45,9 @@ fl36 = Flight.create :date => "23/01/2017", :flight_num => "BA311", :origin => "
 # fl1.save
 
 User.destroy_all
-u1 = User.create :name => "Chanel Onfire", :email => "user@one.com", :password_digest => "chicken", :admin => true
-u2 = User.create :name => "Bob", :email => "bob@bob.com", :password_digest => "chicken", :admin => false
-u3 = User.create :name => "Sally Field", :email => "sally@sally.com", :password_digest => "chicken", :admin => false
+u1 = User.create :name => "Chanel Onfire", :email => "user@one.com", :password => "chicken", :admin => true
+u2 = User.create :name => "Bob", :email => "bob@bob.com", :password => "chicken", :admin => false
+u3 = User.create :name => "Sally Field", :email => "sally@sally.com", :password => "chicken", :admin => false
 
 Reservation.destroy_all
 r1 = Reservation.create :flight_id => 1, :user_id => 1
