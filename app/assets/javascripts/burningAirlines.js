@@ -7,14 +7,14 @@ app.burningFlights = new app.Flights();
 
 $(document).ready(function(){
   // Check to see if main has content
-  if ($('#main').length === 0 ) { return; }
+  if ($('#main').length === 0 ) { return; };
 
   // Use {{ Handlebar tags }} instead of ERB tags, to avoid conflict.
-  _.templateSettings = {
-    evaluate: /\{\{(.+?)\}\}/g,
-    interpolate: /\{\{=(.+?)\}\}/g,
-    escape: /\{\{-(.+?)\}\}/g
-  };
+  // _.templateSettings = {
+  //   evaluate: /\{\{(.+?)\}\}/g,
+  //   interpolate: /\{\{=(.+?)\}\}/g,
+  //   escape: /\{\{-(.+?)\}\}/g
+  // };
 
   app.burningFlights.fetch().done(function () {
     console.log(app.burningFlights);

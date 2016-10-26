@@ -4,8 +4,11 @@
 <div id="main">
 </div>
 
+<div id="display">
+</div>
+
 <!-- FLIGHTS TEMPLATE -->
-<script type="text/x-template" id="flights-template">
+<script type="text/x-template" id="flightsView-template">
   <h2>Origin</h2>
   <div class="origin">
     <select id="origin">
@@ -19,6 +22,20 @@
     </select>
   </div>
   <input type="button" id="restart" value="Find">
+</script>
+
+<script type="text/x-template" id="flightListView-template">
+  <ul>
+  <li>FLIGHT DATE GOES HERE</li>
+  <li>flight ID GOES HERE</li>
+  <li>Flight origin > Flight destination GOES HERE</li>
+  <li> Flight name GOES HERE</li>
+  <li> Seats GO HERE</li>
+
+
+  </ul>
+
+
 </script>
 
 <!-- AIRPLANE TEMPLATE -->
