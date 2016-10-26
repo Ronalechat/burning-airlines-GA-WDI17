@@ -19,6 +19,9 @@ $(document).ready(function(){
   app.burningFlights.fetch().done(function () {
     console.log(app.burningFlights);
     app.appRouter = new app.AppRouter();
+    
+    app.burningFlights.pluck('origin');
+
     // Start history when fetch is ready.
     Backbone.history.start()
   });
