@@ -16,7 +16,6 @@ app.AppRouter = Backbone.Router.extend({
   index: function() {
     alert("Index is working");
     $('#main').hide();
-
   },
 
   // viewAirplane: function(id) {
