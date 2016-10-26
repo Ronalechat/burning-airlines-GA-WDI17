@@ -68,9 +68,27 @@
   </div>
 
   <input type="button" id="doSearch" value="Find">
+
+  <div id="search_results">
+  <!-- search results -->
+  </div>
 </script>
 
 <!-- search template end -->
+
+<script type="text/x-template" id="search-results-template">
+  <div class="col-md-4">HERE ARE THE RESULTS
+    <table class="table table-bordered" id="searchResultsTable">
+      <tr>
+        <td>Date</td>
+        <td>Flight</td>
+        <td>From</td>
+        <td>To</td>
+        <td>Plane</td>
+      </tr>
+    </table>
+  </div>
+</script>
 
 <script type="text/x-template" id="flightid-template">
   <div class="col-md-4">

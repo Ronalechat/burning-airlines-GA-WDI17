@@ -37,6 +37,7 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   viewReservation: function (id) {
+    console.log('in viewReservation', id);
     $('#main').show();
     var f = app.burningFlights.get({'id': id});
     var reservationView = new app.ReservationView({model: f});
@@ -53,7 +54,7 @@ app.AppRouter = Backbone.Router.extend({
     var searchView = new app.SearchView({collection: app.Flights});
     //TODO Make searchView
     searchView.render();
-      
+
 
   }
 

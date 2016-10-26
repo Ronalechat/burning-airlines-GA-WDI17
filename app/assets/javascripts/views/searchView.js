@@ -8,9 +8,12 @@ app.SearchView = Backbone.View.extend({
   doSearch: function(){
     var origin = $('#origin').val();
     var destination = $('#destination').val();
-    var f = app.burningFlights.where({ origin: origin, destination: destination});
+    var f = app.burningFlights.where({ 'origin': origin, 'destination': destination });
 
-    console.log(f);
+    var searchResultsView = new app.SearchResultsView({'collection': f});
+    searchResultsView.render();
+
+    // console.log(f);
   },
 
   render: function () {
