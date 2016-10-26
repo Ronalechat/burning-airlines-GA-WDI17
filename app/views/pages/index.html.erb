@@ -1,76 +1,64 @@
-<div class="container"><h1>Burning Airlines</h1>
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li>
+      <div class="navbar-header">HI</div>
+    </li>
+    
+  </ul>
+</nav>
+<div class="container">
+  <h1>Burning Airlines</h1>
 
 <!-- Append results to main -->
 <div id="main">
 </div>
 
-<div id="display">
-</div>
+<script type="text/x-template" id="flights-template">
 
-<!-- FLIGHTS TEMPLATE -->
-<script type="text/x-template" id="flightsView-template">
   <h2>Origin</h2>
+
   <div class="origin">
     <select id="origin">
       <option>Blank</option>
     </select>
   </div>
+
   <h2>Destination</h2>
+
   <div class="desination">
     <select id="#destination">
       <option>Blank</option>
     </select>
   </div>
+
+  <input type="button" id="restart" value="Find">
+
+</script>
+
+<script type="text/x-template" id="airplane-template">
+
+</script>
+
+<script type="text/x-template" id="search-template">
+  <h2>Origin</h2>
+
+  <div class="origin">
+    <select id="origin">
+      <option>Blank</option>
+    </select>
+  </div>
+
+  <h2>Destination</h2>
+
+  <div class="desination">
+    <select id="#destination">
+      <option>Blank</option>
+    </select>
+  </div>
+
   <input type="button" id="restart" value="Find">
 </script>
 
-<script type="text/x-template" id="flightListView-template">
-  <ul>
-  <li>FLIGHT DATE GOES HERE</li>
-  <li>flight ID GOES HERE</li>
-  <li>Flight origin > Flight destination GOES HERE</li>
-  <li> Flight name GOES HERE</li>
-  <li> Seats GO HERE</li>
-
-
-  </ul>
-
-
-</script>
-
-<!-- AIRPLANE TEMPLATE -->
-<script type="text/x-template" id="airplane-template">
-</script>
-
-<!-- SEARCH TEMPLATE -->
-<script type="text/x-template" id="search-template">
-  <h2>Origin</h2>
-  <div class="search_date">
-    <form >
-  Date: <input type="date" name="date" id:"date">
-  <br><br>
-
-</form>
-  </div>
-  <div class="origin">
-    <select id="origin">
-      <option>Blank</option>
-    </select>
-  </div>
-
-  <h2>Destination</h2>
-
-  <div class="desination">
-    <select id="#destination">
-      <option>Blank</option>
-    </select>
-  </div>
-
-  <input type="button" id="search-flights" value="Search Flights">
-
-</script>
-
-<!-- RESERVATION TEMPLATE -->
 <script type="text/x-template" id="flightid-template">
   <div class="container"></div>
   <table class="table table-bordered">
