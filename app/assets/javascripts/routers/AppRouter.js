@@ -5,7 +5,7 @@ app.Router = Backbone.Router.extend({
     "": "index",
     "airplanes": "airplane",
     "flights": "flight",
-    "flights/:id":"booking",
+    "flights/:id":"reservation",
     "search": "viewSearch"
   },
 
@@ -13,7 +13,9 @@ app.Router = Backbone.Router.extend({
     $('#main').hide();
   },
 
-  // viewAirplane: function()
+  // viewAirplane: function(id) {
+
+// }
 
   viewFlight: function(id) {
     $("#main").show();
@@ -25,6 +27,21 @@ app.Router = Backbone.Router.extend({
       //TODO Make model for flights.
       var flightView = new app.FlightView({model: flight});
       flightView.render();
+    });
+  },
+
+  viewReservation: function (id) {
+    $('#main').show();
+    app.burningFlights.fetch().done(function (){
+      var flight = app.burningFlights.get(id);
+      var airplane_id = flight.attributes.airplane_id
+      var options = {
+        flight: app.burningFlights.get(id),
+        airplane_id: flight.attributes.airplane_id,
+        airplane: app.burningAirplanes.get(airplane_id)
+      }
+      var reservationView = new app.ReservationView({model: options});
+      reservationView.render(options.airplane);
     });
   },
 
