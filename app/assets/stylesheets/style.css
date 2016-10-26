@@ -17,13 +17,3 @@
   border-top: 5px;
   color: grey;
 }
-
-
-/* Nav Inline currently DOES NOT WORK ;'{         */
-.navbar-nav li {
-  display: inline;
-}
-
-.navbar-header {
-  display: inline;
-}
