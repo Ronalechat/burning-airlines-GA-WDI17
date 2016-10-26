@@ -24,7 +24,7 @@ $(document).ready(function(){
   render: function (){
     var origin = app.burningFlights.pluck('origin');
     this.$el.text( origin ); // What would happen if we used .html instead?
-    $('#origin').prepend( this.el);
+    $('#origin').prepend( this.$el);
 };
 
     // Start history when fetch is ready.
