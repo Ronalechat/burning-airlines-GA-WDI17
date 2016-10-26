@@ -68,16 +68,11 @@
 
 <!-- RESERVATION TEMPLATE -->
 <script type="text/x-template" id="flightid-template">
-  <h2>Flight:</h2>{{=flight_num}}
-  <h2>Origin: {{=origin}}</h2>
-  <h2>Destination: {{=destination}}</h2>
-  <h2>Date: {{=date}}</h2>
-<div class="container"></div>
   <table class="table table-bordered">
-  <tr class="active"><p>Flight:<mark>{{flight}}</mark></p></tr>
-  <tr class="active"><p>Origin: <mark>{{origin}}</mark></p></tr>
-  <tr class="active"><p>Destination: <mark>{{destination}}</mark></p></tr>
-  <tr class="active"><p>Date: <mark>{{flight.date}}</mark></p></tr>
+  <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
+  <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
+  <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
+  <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
   </table>
 </div>
   <div class="redline">
