@@ -19,8 +19,15 @@ $(document).ready(function(){
 
   app.burningFlights.fetch().done(function () {
     app.appRouter = new app.AppRouter();
-
-
+    // 
+    // initialize: function() {
+    // },
+    // el: '#main',
+    // render: function () {
+    //     this.$el.html( $('#search-template').html(), {} );
+    //     var aView = new TheView({el: $("#origin")})
+    // };
+    // };
 
   // render: function() {
 
