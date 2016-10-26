@@ -3,7 +3,20 @@
     <li>
       <div class="navbar-header"><a href="/#">Home</a></div>
     </li>
-
+    <li>
+      <div class="navbar-header"><a href="/#search">Search for a flight</a></div>
+    </li>
+    <% if @current_user.present? %>
+    <li>
+      <div class="navbar-header">
+        <%= link_to "Log out #{ @current_user.name }", login_path, :method => 'delete', :class => "nav_link" %>
+      </div>
+    </li>
+    <% else %>
+    <li>
+      <div class="navbar-header"><a href="/login">Login</a></div>
+    </li>
+    <% end %>
   </ul>
 </nav>
 <div class="container">
