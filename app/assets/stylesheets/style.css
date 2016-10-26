@@ -3,5 +3,17 @@
 }
 
 .redline {
+  width: 200px !important;
   border: 1px solid red;
+}
+
+#seats {
+  max-width: 400px;
+}
+
+.seatShape {
+  width: 30px;
+  height: 30px;
+  border-top: 5px;
+  color: grey;
 }
