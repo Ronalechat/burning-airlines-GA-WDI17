@@ -73,16 +73,18 @@
 <!-- search template end -->
 
 <script type="text/x-template" id="flightid-template">
-  <table class="table table-bordered">
-    <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
-    <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
-    <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
-    <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
-    <tr class="active"><p>Cols: <mark id="col">{{=airplane.column}}</mark></p></tr>
-    <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
-  </table>
-</div>
-  <div class="redline">
+  <div class="col-md-4">
+    <table class="table table-bordered">
+      <br>
+      <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
+      <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
+      <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
+      <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
+      <tr class="active"><p>Cols: <mark id="col">{{=airplane.column}}</mark></p></tr>
+      <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
+    </table>
+  </div>
+  <div class="col-md-4">
     <!-- nested looop for rows and columns -->
       <div id="seats"></div>
       <!-- order is important, make sure we render first this.$el.find -->
