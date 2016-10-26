@@ -30,13 +30,17 @@
       <option>Blank</option>
     </select>
   </div>
+<<<<<<< HEAD
 
   <input type="button" id="restart" value="Find">
 
+=======
+>>>>>>> d35a707566977a68664aadc33e91d4bb4e5340ad
   <input type="button" id="restart" value="Find">
 </script>
 
 <script type="text/x-template" id="flightListView-template">
+<<<<<<< HEAD
   <h3></h3>
     <table>
       <thead class="thead">
@@ -47,6 +51,10 @@
         <th>Seats</th>
       </thead>
     </table>
+=======
+
+
+>>>>>>> d35a707566977a68664aadc33e91d4bb4e5340ad
 </script>
 
 <script type="text/x-template" id="airplane-template">
@@ -56,9 +64,18 @@
 <script type="text/x-template" id="search-template">
   <h2>Origin</h2>
 
+  <div class="search_date">
+    <form >
+  Date: <input type="date" name="date" id="date">
+  <br><br>
+
+</form>
+  </div>
+  <h2>Origin</h2>
+
   <div class="origin">
     <select id="origin">
-      <option>Blank</option>
+      <option name="origin" id="origin"><%= origin %></option>
     </select>
   </div>
 
@@ -66,7 +83,7 @@
 
   <div class="desination">
     <select id="#destination">
-      <option>Blank</option>
+      <option name="destination" id="destination"><%= destination %></option>
     </select>
   </div>
 
