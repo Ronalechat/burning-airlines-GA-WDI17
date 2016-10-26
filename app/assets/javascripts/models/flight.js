@@ -6,6 +6,7 @@ app.Flight = Backbone.Model.extend({
   defaults: {
     flight_num: "BA000",
     origin: "",
-    destination: ""
+    destination: "",
+    airplane: {}
   }
 });

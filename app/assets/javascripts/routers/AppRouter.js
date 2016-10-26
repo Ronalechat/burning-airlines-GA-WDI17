@@ -57,7 +57,7 @@ app.AppRouter = Backbone.Router.extend({
 
       var f = app.burningFlights.get({'id': id});
       // console.log('where',  app.burningFlights.where({'id': id})  );
-      // console.log('flight',f, id);
+      console.log('flight',f, id);
 
       var reservationView = new app.ReservationView({model: f});
       reservationView.render();
