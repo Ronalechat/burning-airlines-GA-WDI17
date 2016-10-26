@@ -16,7 +16,8 @@ $(document).ready(function(){
   //   escape: /\{\{-(.+?)\}\}/g
   // };
 
-  app.burningAirplanes.fetch().done(function () {
+  app.burningFlights.fetch().done(function () {
+    console.log(app.burningFlights);
     app.appRouter = new app.AppRouter();
     // Start history when fetch is ready.
     Backbone.history.start()
