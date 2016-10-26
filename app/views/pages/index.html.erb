@@ -74,7 +74,10 @@
   <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
   <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
   <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
-  <tr class="active"><p>Rows/Cols: <mark>{{ Airplane_where airplane_id =={{=airplane_id}} }}</mark></p></tr>
+  <!-- var p = app.burningFlights;
+  p.get({{=airplane_id}}).attributes}} -->
+  <tr class="active"><p>Cols: <mark>{{=airplane.column}}</mark></p></tr>
+  <tr class="active"><p>Rows: <mark>{{=airplane.row}}</mark></p></tr>
   </table>
 </div>
   <div class="redline">
@@ -85,5 +88,9 @@
     </table>
   </div>
 
+</script>
+
+<script type="text/x-template" id="blackSeat">
+  <img src="http://www.4wd.com/aux_incl/images.ashx?i=TR6701MB.jpg&partNo=CBU&w=50&h=50" alt="">
 </script>
 </div>

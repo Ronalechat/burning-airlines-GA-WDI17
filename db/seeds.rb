@@ -29,7 +29,7 @@ fl21 = Flight.create :date => "06/12/2016", :flight_num => "BA742", :origin => "
 fl22 = Flight.create :date => "23/12/2016", :flight_num => "BA814", :origin => "HKG", :destination => "LAX", :airplane_id => 3
 fl23 = Flight.create :date => "06/12/2016", :flight_num => "BA822", :origin => "HKG", :destination => "SYD", :airplane_id => 2
 fl24 = Flight.create :date => "23/12/2016", :flight_num => "BA809", :origin => "HKG", :destination => "CAE", :airplane_id => 3
-fl25 = Flight.create :date => "23/12/2016", :flight_num => "BA811", :origin => "HKG", :destination => "HKG", :airplane_id => 3
+fl25 = Flight.create :date => "23/12/2016", :flight_num => "BA811", :origin => "HKG", :destination => "HKG", t
 
 fl1.airplane = a1
 fl1.save
