@@ -30,9 +30,23 @@
       <option>Blank</option>
     </select>
   </div>
+<<<<<<< HEAD
 
   <input type="button" id="restart" value="Find">
 
+=======
+  <input type="button" id="restart" value="Find">
+</script>
+
+<script type="text/x-template" id="flightListView-template">
+  <ul>
+  <li>FLIGHT DATE GOES HERE</li>
+  <li>flight ID GOES HERE</li>
+  <li>Flight origin > Flight destination GOES HERE</li>
+  <li> Flight name GOES HERE</li>
+  <li> Seats GO HERE</li>
+  </ul>
+>>>>>>> 39a7ed1770bf8239e6714bd7b51940702eddb93d
 </script>
 
 <script type="text/x-template" id="airplane-template">
@@ -60,12 +74,11 @@
 </script>
 
 <script type="text/x-template" id="flightid-template">
-  <div class="container"></div>
   <table class="table table-bordered">
-  <tr class="active"><p>Flight:<mark>{{flight}}</mark></p></tr>
-  <tr class="active"><p>Origin: <mark>{{origin}}</mark></p></tr>
-  <tr class="active"><p>Destination: <mark>{{destination}}</mark></p></tr>
-  <tr class="active"><p>Date: <mark>{{flight.date}}</mark></p></tr>
+  <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
+  <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
+  <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
+  <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
   </table>
 </div>
   <div class="redline">
