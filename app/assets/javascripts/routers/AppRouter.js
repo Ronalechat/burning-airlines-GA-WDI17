@@ -38,6 +38,7 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   viewReservation: function (id) {
+    alert('Routes for Reservation view is working')
     $('#main').show();
     app.burningFlights.fetch().done(function (){
       var flight = app.burningFlights.get(id);
@@ -53,6 +54,7 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   viewSearch: function () {
+    alert('Routes for search view is working')
     $('#main').show();
     $('#main').empty();
     console.log('search');
