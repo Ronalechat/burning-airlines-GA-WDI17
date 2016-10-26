@@ -22,21 +22,21 @@ app.FlightView = Backbone.View.extend({
 
         var currentAirplane = app.burningAirplanes.get(app.burningFlights.models[i].attributes.airplane_id);
         if (currentAirplane) {
-        var name = currentPlane.attributes.name;
+        var name = currentAirplane.attributes.name;
         app.burningFlights.models[i].attributes.name = name;
 
         //calculate remaining seats;
         var totalSeats = currentAirplane.attributes.rows * currentAirplane.attributes.columns
-        var reservedSeats = app.burningFlights.models[i].attributes.reservations.length
-        var remainingSeats = totalSeats - reservedSeats
+        // var reservedSeats = app.burningFlights.models[i].attributes.reservations.length;
+        // var remainingSeats = totalSeats - reservedSeats
 
         // Creates options to pass both
         var option = {
           flight: app.burningFlights.models[i].attributes,
-          seats: remainingSeats
+          // seats: remainingSeats
         }
-        var compiledHTML = flightListViewHTML(options)
-        $("thead.thead").append(compiledHTML);
+        // var compiledHTML = flightListViewHTML(options)
+        // $("thead.thead").append(compiledHTML);
         }
       };
     });
