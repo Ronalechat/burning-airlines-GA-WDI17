@@ -37,19 +37,32 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   viewReservation: function (id) {
-    alert('Routes for Reservation view is working')
     $('#main').show();
-    app.burningFlights.fetch().done(function (){
-      var flight = app.burningFlights.get(id);
-      var airplane_id = flight.attributes.airplane_id
-      var options = {
-        flight: app.burningFlights.get(id),
-        airplane_id: flight.attributes.airplane_id,
-        airplane: app.burningAirplanes.get(airplane_id)
-      }
-      var reservationView = new app.ReservationView({model: options});
-      reservationView.render(options.airplane);
-    });
+    // app.burningFlights.fetch().done(function (){
+      // var flight = app.BurningFlight.fetch(id)
+      // .done(function(){
+          // debugger;
+        // var airplane_id = flight.attributes.airplane_id;
+        // console.log(airplane_id);
+
+      // });
+
+      // var options = {
+      //   flight: app.burningFlights.get(id),
+      //   // airplane_id: flight.attributes.airplane_id,
+      //   // airplane: app.burningAirplanes.get(airplane_id)
+      // }
+
+      console.log('all flights',app.burningFlights);
+
+      var f = app.burningFlights.get({'id': id});
+      // console.log('where',  app.burningFlights.where({'id': id})  );
+      // console.log('flight',f, id);
+
+      var reservationView = new app.ReservationView({model: f});
+      reservationView.render();
+
+    // });
   },
 
   viewSearch: function () {
