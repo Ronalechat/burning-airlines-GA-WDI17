@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.Search = Backbone.model.extend({
+app.Search = Backbone.Model.extend({
    urlRoot: '/search',
    defaults: {
      date: '',
