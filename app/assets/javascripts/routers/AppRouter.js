@@ -1,21 +1,30 @@
 app = app || {};
 
-app.Router = Backbone.Router.extend({
+app.AppRouter = Backbone.Router.extend({
+  // initialize:function(){
+  //   alert("Index is working");
+  // },
+
   routes: {
     "": "index",
-    "airplanes": "airplane",
-    "flights": "flight",
-    "flights/:id":"booking",
+    "airplanes": "viewAirplane",
+    "flights": "viewFlight",
+    "flights/:id":"viewReservation",
     "search": "viewSearch"
   },
 
   index: function() {
+    alert("Index is working");
     $('#main').hide();
+
   },
 
-  // viewAirplane: function()
+  // viewAirplane: function(id) {
+
+// }
 
   viewFlight: function(id) {
+    alert('View Flight is working')
     $("#main").show();
     $("#main").empty();
     app.burningAirplanes.fetch().done(function () {
@@ -25,6 +34,21 @@ app.Router = Backbone.Router.extend({
       //TODO Make model for flights.
       var flightView = new app.FlightView({model: flight});
       flightView.render();
+    });
+  },
+
+  viewReservation: function (id) {
+    $('#main').show();
+    app.burningFlights.fetch().done(function (){
+      var flight = app.burningFlights.get(id);
+      var airplane_id = flight.attributes.airplane_id
+      var options = {
+        flight: app.burningFlights.get(id),
+        airplane_id: flight.attributes.airplane_id,
+        airplane: app.burningAirplanes.get(airplane_id)
+      }
+      var reservationView = new app.ReservationView({model: options});
+      reservationView.render(options.airplane);
     });
   },
 
