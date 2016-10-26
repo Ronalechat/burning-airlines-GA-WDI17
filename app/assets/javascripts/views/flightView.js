@@ -20,7 +20,7 @@ app.FlightView = Backbone.View.extend({
       // Iterates through all flights and gets plane name for flight list.
       for (var i = 0; i < app.burningFlights.models.length; i++) {
 
-        var currentAirplane = app.burningPlanes.get(app.burningFlights.models[i].attributes.airplane_id);
+        var currentAirplane = app.burningAirplanes.get(app.burningFlights.models[i].attributes.airplane_id);
         if (currentAirplane) {
         var name = currentPlane.attributes.name;
         app.burningFlights.models[i].attributes.name = name;
@@ -36,12 +36,27 @@ app.FlightView = Backbone.View.extend({
           seats: remainingSeats
         }
         var compiledHTML = flightListViewHTML(options)
-        // $("Thread.threa")
-      }
-    };
+        $("thead.thead").append(compiledHTML);
+        }
+      };
     });
+    // Iterates through all Airplanes and get plane names for the selected drop down.
+    // for (var i = 0; i < app.burningAirplanes.models.length; i++ ) {
+    //   var name = app.burningAirplanes.models[i].attributes.name;
+    //   var $dataid = app.burningAirplanes.models[i].attributes.id;
+      // $option = $("<option data-id=\"" + $dataid + "\"></option>"); // For choose-plane
+      // $option.text(name);
+      // $option.appendTo($('.choose-plane')); // For new flight.
+    // }
+  },
 
+  showSeats: function(result) {
+    var id = result.currentTarget.id;
+    app.appRouter.navigate('flights/' + id, true)
   }
+
+
+
 
 
 

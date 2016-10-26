@@ -14,7 +14,7 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   index: function() {
-    alert("Index is working");
+    console.log("Index is working");
     $('#main').hide();
   },
 
@@ -23,7 +23,7 @@ app.AppRouter = Backbone.Router.extend({
 // }
 
   viewFlight: function(id) {
-    alert('View Flight is working')
+    console.log('View Flight is working');
     $("#main").show();
     $("#main").empty();
     app.burningAirplanes.fetch().done(function () {
@@ -38,35 +38,15 @@ app.AppRouter = Backbone.Router.extend({
 
   viewReservation: function (id) {
     $('#main').show();
-    // app.burningFlights.fetch().done(function (){
-      // var flight = app.BurningFlight.fetch(id)
-      // .done(function(){
-          // debugger;
-        // var airplane_id = flight.attributes.airplane_id;
-        // console.log(airplane_id);
+    var f = app.burningFlights.get({'id': id});
 
-      // });
-
-      // var options = {
-      //   flight: app.burningFlights.get(id),
-      //   // airplane_id: flight.attributes.airplane_id,
-      //   // airplane: app.burningAirplanes.get(airplane_id)
-      // }
-
-      console.log('all flights',app.burningFlights);
-
-      var f = app.burningFlights.get({'id': id});
-      // console.log('where',  app.burningFlights.where({'id': id})  );
-      // console.log('flight',f, id);
-
-      var reservationView = new app.ReservationView({model: f});
+    var reservationView = new app.ReservationView({model: f});
       reservationView.render();
 
-    // });
   },
 
   viewSearch: function () {
-    alert('Routes for search view is working')
+    console.log('Routes for search view is working');
     $('#main').show();
     $('#main').empty();
     console.log('search');
