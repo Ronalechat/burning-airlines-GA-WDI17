@@ -35,18 +35,14 @@
 </script>
 
 <script type="text/x-template" id="flightListView-template">
-
-  <h3></h3>
-    <table>
-      <thead class="thead">
-        <th>Date</th>
-        <th>Flight_num</th>
-        <th>From > To</th>
-        <th>Plane</th>
-        <th>Seats</th>
-      </thead>
-    </table>
-</script>
+  <ul>
+  <li>FLIGHT DATE GOES HERE</li>
+  <li>flight ID GOES HERE</li>
+  <li>Flight origin > Flight destination GOES HERE</li>
+  <li> Flight name GOES HERE</li>
+  <li> Seats GO HERE</li>
+  </ul>
+ </script>
 
 <script type="text/x-template" id="airplane-template">
 
@@ -55,18 +51,9 @@
 <script type="text/x-template" id="search-template">
   <h2>Origin</h2>
 
-  <div class="search_date">
-    <form >
-  Date: <input type="date" name="date" id="date">
-  <br><br>
-
-</form>
-  </div>
-  <h2>Origin</h2>
-
   <div class="origin">
     <select id="origin">
-      <option name="origin" id="origin">{{=origin}}</option>
+      <option>Blank</option>
     </select>
   </div>
 
@@ -74,7 +61,7 @@
 
   <div class="desination">
     <select id="#destination">
-      <option name="destination" id="destination">{{=destination}}</option>
+      <option>Blank</option>
     </select>
   </div>
 
@@ -87,6 +74,7 @@
   <tr class="active"><p>Origin: <mark>{{=origin}}</mark></p></tr>
   <tr class="active"><p>Destination: <mark>{{=destination}}</mark></p></tr>
   <tr class="active"><p>Date: <mark>{{=date}}</mark></p></tr>
+  <tr class="active"><p>Rows/Cols: <mark>{{=airplane_id}}</mark></p></tr>
   </table>
 </div>
   <div class="redline">

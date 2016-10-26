@@ -38,7 +38,8 @@ app.AppRouter = Backbone.Router.extend({
 
   viewReservation: function (id) {
     $('#main').show();
-    var f = app.burningFlights.get({'id': id});
+    var f = app.burningFlights.get({'id': id}).attributes;
+    console.log(f);
     var reservationView = new app.ReservationView({model: f});
       reservationView.render();
 
