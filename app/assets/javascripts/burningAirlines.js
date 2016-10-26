@@ -21,7 +21,6 @@ $(document).ready(function(){
     app.appRouter = new app.AppRouter();
 
 
-
   // render: function() {
 
   //   var origin = app.burningFlights.pluck('origin');

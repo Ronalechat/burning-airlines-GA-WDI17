@@ -25,3 +25,33 @@
  .redline {
    border: 1px solid red;
  }
+
+ .colorful {
+   color: white;
+   text-align: center;
+   background-color: grey !important;
+  //  border-radius: 2px solid white;
+   border: 2px solid white;
+   height: 40px;
+   line-height: 40px;
+   font-size: 10px;
+ }
+
+ .colorful {
+   color: white;
+   text-align: center;
+   background-color: grey !important;
+  //  border-radius: 2px solid white;
+   border: 2px solid white;
+   height: 40px;
+   line-height: 40px;
+   font-size: 10px;
+ }
+
+ .colorful:hover {
+   background-color: #d3d3d3 !important;
+ }
+
+ .colorful:active {
+   background-color: red !important;
+ }

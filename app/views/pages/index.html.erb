@@ -8,10 +8,24 @@
 </nav>
 <div class="container">
   <h1>Burning Airlines</h1>
+  <br>
 
 <!-- Append results to main -->
 <div id="main">
 </div>
+
+<script type="text/x-template" id="flights-home">
+
+  <div class="col-md-6">
+    <h3>Start your journey into death today</h3>
+      <button class="btn btn-success">Find a flight</button>
+    </div>
+    <div class="col-md-6">
+      <h3>List of flights</h3>
+  </div>
+
+</script>
+
 
 <script type="text/x-template" id="flights-template">
 
@@ -69,7 +83,7 @@
 </script>
 
 <script type="text/x-template" id="flightid-template">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <table class="table table-bordered">
       <br>
       <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
@@ -80,8 +94,9 @@
       <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
     </table>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <!-- nested looop for rows and columns -->
+    <p>Please click to select a seat</p>
       <div id="seats"></div>
       <!-- order is important, make sure we render first this.$el.find -->
       <!-- flight view render _template to paste variables in-->
