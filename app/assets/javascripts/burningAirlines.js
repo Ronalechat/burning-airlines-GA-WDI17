@@ -11,7 +11,9 @@ $(document).ready(function(){
 
   // Use {{ Handlebar tags }} instead of ERB tags, to avoid conflict.
   _.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
+    evaluate: /\{\{(.+?)\}\}/g,
+    interpolate: /\{\{=(.+?)\}\}/g,
+    escape: /\{\{-(.+?)\}\}/g
   };
 
   app.burningAirplanes.fetch().done(function () {
