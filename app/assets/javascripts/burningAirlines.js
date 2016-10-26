@@ -20,6 +20,10 @@ $(document).ready(function(){
   app.burningFlights.fetch().done(function () {
     app.appRouter = new app.AppRouter();
 
+
+
+  // render: function() {
+
   //   var origin = app.burningFlights.pluck('origin');
   //   this.$el.text( origin ); // What would happen if we used .html instead?
   //   $('#origin').prepend(this.$el);
