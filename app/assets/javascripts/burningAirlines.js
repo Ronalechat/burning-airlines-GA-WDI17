@@ -16,7 +16,6 @@ $(document).ready(function(){
 
   app.burningAirplanes.fetch().done(function () {
     app.appRouter = new app.AppRouter();
-
     // Start history when fetch is ready.
     Backbone.history.start()
   });

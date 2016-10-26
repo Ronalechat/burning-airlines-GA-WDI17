@@ -1,16 +1,22 @@
 app = app || {};
 
-app.Router = Backbone.Router.extend({
+app.AppRouter = Backbone.Router.extend({
+  // initialize:function(){
+  //   alert("Index is working");
+  // },
+
   routes: {
     "": "index",
-    "airplanes": "airplane",
-    "flights": "flight",
-    "flights/:id":"reservation",
+    "airplanes": "viewAirplane",
+    "flights": "viewFlight",
+    "flights/:id":"viewReservation",
     "search": "viewSearch"
   },
 
   index: function() {
+    alert("Index is working");
     $('#main').hide();
+
   },
 
   // viewAirplane: function(id) {
@@ -18,6 +24,7 @@ app.Router = Backbone.Router.extend({
 // }
 
   viewFlight: function(id) {
+    alert('View Flight is working')
     $("#main").show();
     $("#main").empty();
     app.burningAirplanes.fetch().done(function () {
