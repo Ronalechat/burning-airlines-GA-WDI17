@@ -68,12 +68,30 @@ app.ReservationView = Backbone.View.extend({
   for (var i = 0; i < seatCount; i++) {
     ($seats).append('<div class="colorful"></div>').html(html)
     };
-},
+  },
+
+    // if ()$('.thisSeat').remove();
+
 
 
 resSeat: function(event){
   console.log('Ive been clicked');
   $('.thisSeat').append($(event.target).attr('id'));
-  $(event.target).addClass('selected');
+  $('.reserve').append('<button class="btn btn-success reserve">Reserve</button>'
+).done();
+  $(event.target).addClass('selected disabled');
+  $(event.target).click(false);
   }
+
 });
+
+// $('.btn').on('click', function( {
+//   var seatId = $('.thisSeat').text();
+//   // var user = session_id;
+//   // var flight = flight_num;
+//   console.log($('.thisSeat').text());
+// });
+
+// } else {
+//   return;
+// }

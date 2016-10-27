@@ -1,29 +1,31 @@
 <nav class="navbar navbar-default">
-  <ul class="nav navbar-nav">
+  <div class="container">
+  <ul class="nav">
     <li>
-      <div class="navbar-header"><a href="/#">Home</a></div>
+      <div class="navbar-inverse navbar-header col-md-3"><a href="/#">Home</a></div>
     </li>
     <li>
-      <div class="navbar-header"><a href="/#search">Search for a flight</a></div>
+      <div class="navbar-header col-md-3"><a href="/#search">Search for a flight</a></div>
     </li>
     <% if @current_user.present? %>
     <li>
-      <div class="navbar-header">
+      <div class="navbar-header col-md-3">
         <%= link_to "Log out #{ @current_user.name }", login_path, :method => 'delete', :class => "nav_link" %>
       </div>
     </li>
     <% else %>
     <li>
-      <div class="navbar-header"><a href="/login">Login</a></div>
+      <div class="navbar-header col-md-3"><a href="/login">Login</a></div>
     </li>
     <li>
-      <div class="navbar-header">
+      <div class="navbar-header col-md-3">
         <%= link_to "Create account", new_user_path, :class => "nav_link" %>
       </div>
     </li>
 
     <% end %>
   </ul>
+</div>
 </nav>
 <div class="container">
   <h1>Burning Airlines</h1>
@@ -139,6 +141,7 @@
     <!-- nested looop for rows and columns -->
     <p>Please click to select a seat</p>
     <p>Your seat is: <span class="thisSeat"></span></p>
+    <p class="reserve"></p>
 
       <div id="seats"></div>
       <!-- order is important, make sure we render first this.$el.find -->
