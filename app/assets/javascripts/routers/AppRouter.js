@@ -13,13 +13,13 @@ app.AppRouter = Backbone.Router.extend({
     "search": "viewSearch"
   },
 
-  index: function() {
-    console.log("Index is working");
-    $("#main").show();
-    $("#main").empty();
-    var appView = new app.AppView({});
-    appView.render();
-  },
+  // index: function() {
+  //   console.log("Index is working");
+  //   $("#main").show();
+  //   $("#main").empty();
+  //   var appView = new app.AppView({});
+  //   appView.render();
+  // },
 
   // viewAirplane: function(id) {
 
