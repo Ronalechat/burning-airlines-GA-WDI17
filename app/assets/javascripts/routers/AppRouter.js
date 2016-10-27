@@ -6,7 +6,7 @@ app.AppRouter = Backbone.Router.extend({
   // },
 
   routes: {
-    "": "index",
+    "": "viewSearch",
     "airplanes": "viewAirplane",
     "flights": "viewFlight",
     "flights/:id":"viewReservation",
@@ -43,7 +43,6 @@ app.AppRouter = Backbone.Router.extend({
     console.log('in viewReservation', num);
     $('#main').show();
     var f = app.burningFlights.findWhere({'flight_num': num});
-    console.log('flight', f);
     var reservationView = new app.ReservationView({model: f});
       reservationView.render();
 
