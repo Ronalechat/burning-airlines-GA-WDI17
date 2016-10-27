@@ -81,7 +81,7 @@ resSeat: function(event){
 ).done();
   $(event.target).addClass('selected disabled');
   $(event.target).click(false);
-  }
+}
 
 });
 
