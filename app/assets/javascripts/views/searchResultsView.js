@@ -8,6 +8,7 @@ app.SearchResultsView = Backbone.View.extend({
 
   doReservation: function(e){
     app.appRouter.navigate('flights/' + e.currentTarget.id, true);
+    console.log(e);
   },
   // this.collection
 

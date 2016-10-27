@@ -18,7 +18,6 @@ $(document).ready(function(){
   if ($('#main').length === 0 ) { return; };
 
   app.burningFlights.fetch().done(function () {
-    app.appRouter = new app.AppRouter();
 
     //
     //   initialize: function() {
@@ -31,7 +30,8 @@ $(document).ready(function(){
     //   this.$el.text( origin );
     //   $('#origin').prepend(this.$el);
     // };
+    app.appRouter = new app.AppRouter();
+    Backbone.history.start();
 
-    Backbone.history.start()
   });
 });

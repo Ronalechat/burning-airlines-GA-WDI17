@@ -16,6 +16,12 @@
     <li>
       <div class="navbar-header"><a href="/login">Login</a></div>
     </li>
+    <li>
+      <div class="navbar-header">
+        <%= link_to "Create account", new_user_path, :class => "nav_link" %>
+      </div>
+    </li>
+
     <% end %>
   </ul>
 </nav>
@@ -118,7 +124,7 @@
 </script>
 
 <script type="text/x-template" id="flightid-template">
-  <div class="col-md-6">
+  <div class="col-md-4">
     <table class="table table-bordered">
       <br>
       <tr class="active"><p>Flight:<mark>{{=flight_num}}</mark></p></tr>
@@ -129,7 +135,7 @@
       <tr class="active"><p>Rows: <mark id"row">{{=airplane.row}}</mark></p></tr>
     </table>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-8">
     <!-- nested looop for rows and columns -->
     <p>Please click to select a seat</p>
     <p>Your seat is: <span class="thisSeat"></span></p>
