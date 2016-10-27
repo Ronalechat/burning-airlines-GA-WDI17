@@ -16,6 +16,7 @@
  *= require_self
  */
 
+
  .container {
    margin-top: 100px;
    max-width: 960px;
@@ -49,9 +50,13 @@
  }
 
  .colorful:hover {
-   background-color: #d3d3d3 !important;
- }
-
- .colorful:active {
    background-color: red !important;
  }
+
+ .selected {
+   background-color: red !important;
+ }
+
+ // .colorful:active {
+ //   background-color: red !important;
+ // }

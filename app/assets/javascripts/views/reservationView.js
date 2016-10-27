@@ -31,7 +31,8 @@ app.ReservationView = Backbone.View.extend({
     html += '<div class="row">';
     for (var i = 0; i < thisCol; i ++) {
       var chr = String.fromCharCode(97 + i);
-      html += '<div class="column colorful col-md-3">';
+      html += '<div class="column colorful col-md-3" id='+row+chr+'>';
+      $(this).attr('id', row + chr);
       html += row + chr;
       html += '</div>';
     };
@@ -44,8 +45,12 @@ app.ReservationView = Backbone.View.extend({
     };
 },
 
-resSeat: function(){
-  console.log('ive been clicked')
-}
+// $(event.target).removeClass('selected');
 
+
+resSeat: function(event){
+  console.log('Ive been clicked');
+  $('.thisSeat').append($(event.target).attr('id'));
+  $(event.target).addClass('selected');
+  }
 });
