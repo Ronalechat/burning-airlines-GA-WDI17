@@ -28,10 +28,10 @@ app.ReservationView = Backbone.View.extend({
   var html = "";
 
   for (var row = 1; row <= thisRow; row ++) {
-    html += '<div class="row">';
+    html += '<div class="row" id="seat_rows">';
     for (var i = 0; i < thisCol; i ++) {
       var chr = String.fromCharCode(97 + i);
-      html += '<div class="column colorful col-md-3">';
+      html += '<div class="column colorful col-md-2">';
       html += row + chr;
       html += '</div>';
     };
