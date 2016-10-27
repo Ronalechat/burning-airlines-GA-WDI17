@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :set_reservation, only: [:edit, :update, :destroy]
 
   # GET /reservations
   # GET /reservations.json
@@ -10,6 +10,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/1
   # GET /reservations/1.json
   def show
+    @reservations = Reservation.where(flight_id: params[:id])
   end
 
   # GET /reservations/new

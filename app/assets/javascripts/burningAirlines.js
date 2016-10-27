@@ -31,6 +31,7 @@ $(document).ready(function(){
     //   $('#origin').prepend(this.$el);
     // };
     app.appRouter = new app.AppRouter();
-    Backbone.history.start()
+    Backbone.history.start();
+
   });
 });

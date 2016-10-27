@@ -14,6 +14,18 @@ app.ReservationView = Backbone.View.extend({
     //   app.appRouter.navigate('flights/' + e.currentTarget.id, true);
     // },
 
+
+    // console.log(this.model.attributes.id);
+
+  var model = this.model;
+
+  setInterval(function(){
+      app.flightReservations = new app.Reservations(model.attributes.id);
+      app.flightReservations.fetch().done(function(){
+        console.log(app.flightReservations);
+      });
+    }, 1000);
+
     // console.log(this.model);
 
     var $seats = this.$el.find('#seats');
@@ -31,7 +43,7 @@ app.ReservationView = Backbone.View.extend({
     html += '<div class="row" id="seat_rows">';
     for (var i = 0; i < thisCol; i ++) {
       var chr = String.fromCharCode(97 + i);
-      html += '<div class="column colorful col-md-3">';
+      html += '<div class="column colorful col-md-3" id="' + row + chr + '">';
       html += row + chr;
       html += '</div>';
     };
@@ -46,6 +58,7 @@ app.ReservationView = Backbone.View.extend({
 
 resSeat: function(){
   console.log('ive been clicked')
+
 }
 
 });
