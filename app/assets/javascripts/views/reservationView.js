@@ -26,6 +26,11 @@ app.ReservationView = Backbone.View.extend({
       });
     }, 1000);
 
+    // PSEUDOCODE For reserved seats:
+    // Grab reservations seat value.
+    // Make div ID of seat Value taken
+    // On click+ submit, make new app.reservation for that ID, with that seat value. 
+
     // console.log(this.model);
 
     var $seats = this.$el.find('#seats');
