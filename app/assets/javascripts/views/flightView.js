@@ -55,9 +55,4 @@ app.FlightView = Backbone.View.extend({
     app.appRouter.navigate('flights/' + id, true)
   }
 
-
-
-
-
-
 });

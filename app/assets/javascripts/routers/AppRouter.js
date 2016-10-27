@@ -6,20 +6,20 @@ app.AppRouter = Backbone.Router.extend({
   // },
 
   routes: {
-    "": "index",
+    "": "viewSearch",
     "airplanes": "viewAirplane",
     "flights": "viewFlight",
     "flights/:id":"viewReservation",
     "search": "viewSearch"
   },
 
-  index: function() {
-    console.log("Index is working");
-    $("#main").show();
-    $("#main").empty();
-    var appView = new app.AppView({});
-    appView.render();
-  },
+  // index: function() {
+  //   console.log("Index is working");
+  //   $("#main").show();
+  //   $("#main").empty();
+  //   var appView = new app.AppView({});
+  //   appView.render();
+  // },
 
   // viewAirplane: function(id) {
 
@@ -39,10 +39,10 @@ app.AppRouter = Backbone.Router.extend({
     });
   },
 
-  viewReservation: function (id) {
-    console.log('in viewReservation', id);
+  viewReservation: function (num) {
+    console.log('in viewReservation', num);
     $('#main').show();
-    var f = app.burningFlights.get({'id': id});
+    var f = app.burningFlights.findWhere({'flight_num': num});
     var reservationView = new app.ReservationView({model: f});
       reservationView.render();
 
