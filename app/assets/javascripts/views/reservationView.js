@@ -26,6 +26,11 @@ app.ReservationView = Backbone.View.extend({
       });
     }, 1000);
 
+    // PSEUDOCODE For reserved seats:
+    // Grab reservations seat value.
+    // Make div ID of seat Value taken
+    // On click+ submit, make new app.reservation for that ID, with that seat value.
+
     // console.log(this.model);
 
     var $seats = this.$el.find('#seats');
@@ -43,7 +48,10 @@ app.ReservationView = Backbone.View.extend({
     html += '<div class="row" id="seat_rows">';
     for (var i = 0; i < thisCol; i ++) {
       var chr = String.fromCharCode(97 + i);
-      html += '<div class="column colorful col-md-2" id="' + row + chr + '">';
+
+      html += '<div class="column colorful col-md-3" id='+row+chr+'>';
+      $(this).attr('id', row + chr);
+
       html += row + chr;
       html += '</div>';
     };
@@ -54,11 +62,30 @@ app.ReservationView = Backbone.View.extend({
   for (var i = 0; i < seatCount; i++) {
     ($seats).append('<div class="colorful"></div>').html(html)
     };
-},
+  },
 
-resSeat: function(){
-  console.log('ive been clicked')
+    // if ()$('.thisSeat').remove();
 
-}
+
+
+resSeat: function(event){
+  console.log('Ive been clicked');
+  $('.thisSeat').append($(event.target).attr('id'));
+  $('.reserve').append('<button class="btn btn-success reserve">Reserve</button>'
+).done();
+  $(event.target).addClass('selected disabled');
+  $(event.target).click(false);
+  }
 
 });
+
+// $('.btn').on('click', function( {
+//   var seatId = $('.thisSeat').text();
+//   // var user = session_id;
+//   // var flight = flight_num;
+//   console.log($('.thisSeat').text());
+// });
+
+// } else {
+//   return;
+// }
