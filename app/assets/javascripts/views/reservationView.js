@@ -22,7 +22,13 @@ app.ReservationView = Backbone.View.extend({
   setInterval(function(){
       app.flightReservations = new app.Reservations(model.attributes.id);
       app.flightReservations.fetch().done(function(){
-        console.log(app.flightReservations);
+        // console.log(app.flightReservations);
+        var pap = app.flightReservations;
+        var seats = pap.pluck("seat");
+        _(seats).each(function(reserved){
+          $('#' + reserved).addClass('selected disabled')
+        })
+        // seats are our already reserved seats
       });
     }, 1000);
 

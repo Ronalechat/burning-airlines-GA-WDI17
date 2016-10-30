@@ -23,6 +23,45 @@
    margin: 0 auto;
  }
 
+ .nav {
+     list-style: none;
+     display: flex;
+ }
+
+ .navbar-header {
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     width: 160px;
+     text-align: center;
+     padding: 5px;
+     font-size: 16px;
+     margin: 20px 20px 80px 0;
+     background-color: #eee;
+     color: black;
+ }
+ .navbar-header:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+.navbar-header:active {
+   background-color: rgb(255, 0, 0);
+   color: black;
+}
+h2, .h2 {
+   font-size: 1.5rem;
+   margin: 20px 0;
+}
+input, button, select, textarea {
+    line-height: inherit;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #373a3c;
+    color: #fff;
+}
+#home_link {
+margin-right: 10px;
+}
  .redline {
    border: 1px solid red;
  }
