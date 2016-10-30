@@ -69,6 +69,9 @@ app.ReservationView = Backbone.View.extend({
 
 
 resSeat: function(event){
+  if $(event.target).hasClass('disabled') {
+    return;
+  } else {
   console.log('Ive been clicked');
   $('.thisSeat').append($(event.target).attr('id'));
   $('.reserve').append('<button class="btn btn-success reserve">Reserve</button>'
@@ -76,6 +79,7 @@ resSeat: function(event){
   $(event.target).addClass('selected disabled');
   $(event.target).click(false);
   }
+}
 
 });
 
